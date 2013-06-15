@@ -1,7 +1,6 @@
 angular.module("barcamp", [])
   .controller("GridController", function ($scope, $http) {
     $http.get("times.json").then(function (res) {
-      console.log(res.body);
       $scope.times = res.data;
     });
     $http.get("rooms.json").then(function (res) {
